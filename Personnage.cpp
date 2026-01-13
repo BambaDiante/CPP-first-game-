@@ -1,5 +1,5 @@
 #include "Personnage.hpp"
-
+#include <iostream>
 using namespace std;
 Personnage::Personnage() : m_vie(100), m_mana(100), m_nomArme("Epee rouillee"), m_degatsArme(10)
 {
@@ -49,6 +49,11 @@ void Personnage::changerArme(string nomNouvelleArme, int degatsNouvelleArme)
 bool Personnage::estVivant()
 {
     return m_vie > 0;
+}
+void Personnage::afficherEtat(){
+    cout <<"Niveau de vie: "<< m_vie << endl;
+    cout <<"Niveau de magie:"<< m_mana <<endl;
+
 }
 //on utilise un contructeur pour initialiser les valeurs des attributs
 //un construteur est une methode qui n'a pas de valeur de retour et qui le meme non que la classe

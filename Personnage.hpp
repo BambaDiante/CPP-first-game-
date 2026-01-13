@@ -18,6 +18,7 @@ class Personnage
     void attaquer(Personnage &cible);//cible est une reference a un autre joueur qui est egalement un personnage avec les memes champs
     void boirePotionDeVie(int quantitePotion);
     void changerArme(std::string nomNouvelleArme, int degatsNouvelleArme);
+    void afficherEtat();
     bool estVivant();
 
     private:
