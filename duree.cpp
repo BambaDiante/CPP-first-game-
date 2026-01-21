@@ -1,5 +1,6 @@
 #include "duree.hpp"
- 
+#include <iostream>
+using namespace std;
 duree::duree(int heures, int minutes, int secondes) : m_heures(heures), m_minutes(minutes), m_secondes(secondes)
 {
 }
@@ -55,4 +56,23 @@ bool operator<(duree const& a, duree const& b)
 {
     return a.inferieur(b);
 }
+void duree::afficher() const{
+    cout<<"Heures: "<< m_heures<< endl;
+    cout<<"Minutes: "<< m_minutes<< endl;
+    cout<<"Secondes: "<< m_secondes<< endl;
+}
+duree duree::additionner(duree const& b) const{
+    return duree (m_heures+b.m_heures,m_minutes+b.m_minutes,m_secondes+b.m_secondes);
+}
+duree operator+(duree const& a,duree const& b){
+    return a.additionner(b);
+}
+duree duree::soustraire(duree const& b) const{
+    return duree (m_heures-b.m_heures,m_minutes-b.m_minutes,m_secondes-b.m_secondes);
+}
+duree operator-(duree const& a,duree const& b){
+    return a.soustraire(b);
+}
+
+
 
