@@ -1,6 +1,9 @@
 #include <iostream>
-#include "Personnage.hpp" 
+#include "Personnage.hpp"
 #include "Personnage.cpp"
+#include "Magicien.hpp"
+#include "Magicien.cpp"
+
 using namespace std;
 
 int main()
@@ -19,6 +22,15 @@ int main()
     david.afficherEtat();
     cout << "Etat de goliath : " << endl;
     goliath.afficherEtat();
+    Magicien Gojo,Sukuna;
+    Gojo.ensorceler(Sukuna);
+    cout <<"Attaque de GOjo vers Sukuna"<< endl;
+    cout << "Etat de Gojo : " << endl;
+    Gojo.afficher();
+    cout << "Etat de Sukuna : " << endl;
+    Sukuna.afficher();
+
+    
 
 
     return 0;

@@ -21,8 +21,8 @@ class Personnage
     void afficherEtat();
     bool estVivant();
 
-    private:
-    //selon le principe de l'ancapsulation on met les attributs de la classe en private pour que l'utilisateur ne fasse rien de dangeureux  
+    protected:
+    //selon le principe de l'ancapsulation on met les attributs de la classe en protected pour que les classes derives puissent y acceder
     int m_vie;
     int m_mana;
     std::string m_nomArme; //Pas de using namespace std, il faut donc mettre std:: devant string
